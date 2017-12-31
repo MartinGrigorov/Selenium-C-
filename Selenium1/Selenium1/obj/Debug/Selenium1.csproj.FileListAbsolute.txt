@@ -1,0 +1,9 @@
+C:\Users\marto\Desktop\Selenium C#\Selenium1\Selenium1\bin\Debug\Selenium1.exe.config
+C:\Users\marto\Desktop\Selenium C#\Selenium1\Selenium1\bin\Debug\Selenium1.exe
+C:\Users\marto\Desktop\Selenium C#\Selenium1\Selenium1\bin\Debug\Selenium1.pdb
+C:\Users\marto\Desktop\Selenium C#\Selenium1\Selenium1\bin\Debug\WebDriver.dll
+C:\Users\marto\Desktop\Selenium C#\Selenium1\Selenium1\bin\Debug\WebDriver.xml
+C:\Users\marto\Desktop\Selenium C#\Selenium1\Selenium1\obj\Debug\Selenium1.csprojResolveAssemblyReference.cache
+C:\Users\marto\Desktop\Selenium C#\Selenium1\Selenium1\obj\Debug\Selenium1.csproj.CoreCompileInputs.cache
+C:\Users\marto\Desktop\Selenium C#\Selenium1\Selenium1\obj\Debug\Selenium1.exe
+C:\Users\marto\Desktop\Selenium C#\Selenium1\Selenium1\obj\Debug\Selenium1.pdb
