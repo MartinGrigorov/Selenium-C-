@@ -11,33 +11,36 @@ using NUnit.Framework;
 namespace Selenium3
 {
     class Program
-    {
-        IWebDriver driver = new ChromeDriver();
-
+    {   
         static void Main(string[] args)
         {
         }
         [SetUp]
         public void Start()
         {
-            driver.Navigate().GoToUrl("http://executeautomation.com/demosite/index.html?UserName=&Password=&Login=Login");
+            PropertiesCollection.driver = new ChromeDriver();
+
+
+            PropertiesCollection.driver.Navigate().GoToUrl("http://executeautomation.com/demosite/index.html?UserName=&Password=&Login=Login");
         }
 
         [Test]
         public void ExcludeTests()
         {
             //Title
-            SeleniumSetMethods.SelectDropDown(driver, "TitleId", "Ms.", "Id");
+            SeleniumSetMethods.SelectDropDown("TitleId", "Ms.", PropertyType.Id);
 
             //Initial
-            SeleniumSetMethods.EnterText(driver, "Initial", "executeoperation", "Name");
+            SeleniumSetMethods.EnterText("Initial", "executeoperation", PropertyType.Name);
 
-            Console.WriteLine("The value from the Title is: " + SeleniumGetMethods.GetText(driver, "TitleId", "Id"));
-            Console.WriteLine("The value from the Initial is: " + SeleniumGetMethods.GetText(driver, "Initial", "Name"));
+            Console.WriteLine("The value from the Title is: " + SeleniumGetMethods.GetText("TitleId", PropertyType.Id));
+            Console.WriteLine("The value from the Initial is: " + SeleniumGetMethods.GetText("Initial", PropertyType.Name));
+           
+                
 
             //Click
-            SeleniumSetMethods.Click(driver, "Save", "Name");
+            SeleniumSetMethods.Click("Save", PropertyType.Name);
         }
-
+        
     }
 }
