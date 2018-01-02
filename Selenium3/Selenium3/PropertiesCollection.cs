@@ -18,8 +18,7 @@ namespace Selenium3
 
 
     class PropertiesCollection
-    {
-        
+    {        
         //Auto-implemented Property - here will be declared all generrinc properties 
         public static IWebDriver driver { get; set; }
 
