@@ -8,10 +8,20 @@ using System.Threading.Tasks;
 
 namespace Selenium3
 {
-    class SeleniumSetMethods
+    public static class SeleniumSetMethods
     {
-        //Enter Text
-        public static void EnterText(/*string element,*/IWebElement element, string value/*, PropertyType elementtype*/)
+
+        //ако добавим this пред IWebElement то това ще се превърне в екстеншън метод, говорим а EnterText 
+        //за да се случи това трябва class SeleniumSetMethods да бъде сменен на public static class SeleniumSetMethods
+        //същото можем а направим с метода Click и метода SelectDropDown
+
+
+        /// <summary>
+        /// Extended method for entering text in the control(this)
+        /// </summary>
+        /// <param name="element"></param>
+        /// <param name="value"></param>
+        public static void EnterText(/*string element,*/this IWebElement element, string value/*, PropertyType elementtype*/)
         {
             //if (elementtype == PropertyType.Id)
             //{
@@ -26,8 +36,12 @@ namespace Selenium3
         }
 
 
-        //click operation a button, Checkbox, option etc
-        public static void Click(IWebElement element/*, PropertyType elementtype*/)
+
+        /// <summary>
+        /// Extended method for click operation a button, Checkbox, option etc
+        /// </summary>
+        /// <param name="element"></param>
+        public static void Clicks(this IWebElement element/*, PropertyType elementtype*/)
         {
             //if (elementtype == PropertyType.Id)
             //{
@@ -41,8 +55,12 @@ namespace Selenium3
         }
 
 
-        //selecting Drop down control
-        public static void SelectDropDown(IWebElement element, string value/*, PropertyType elementtype*/)
+        /// <summary>
+        /// Extended method for selecting Drop down control
+        /// </summary>
+        /// <param name="element"></param>
+        /// <param name="value"></param>
+        public static void SelectDropDown(this IWebElement element, string value/*, PropertyType elementtype*/)
         {
             //if (elementtype == PropertyType.Id)
             //{

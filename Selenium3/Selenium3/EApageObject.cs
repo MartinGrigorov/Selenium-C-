@@ -18,7 +18,6 @@ namespace Selenium3
         [FindsBy(How = How.Id, Using = "TitleId")]
         public IWebElement ddlTitleID { get; set; }
 
-
         [FindsBy(How = How.Name, Using = "Initial")]
         public IWebElement txtInitial { get; set; }
 
@@ -34,18 +33,27 @@ namespace Selenium3
 
 
         public void FillUserForm(string initial, string middleName, string firstName)
-        {
-            //txtInitial.SendKeys(initial);
+        {   ////1
+            ////txtInitial.SendKeys(initial);
             //txtMiddleName.SendKeys(middleName);
             //txtFirsName.SendKeys(firstName);
             //btnSave.Click();
 
 
-            //with custom methods
-            SeleniumSetMethods.EnterText(txtInitial, initial);
-            SeleniumSetMethods.EnterText(txtFirsName, firstName);
-            SeleniumSetMethods.EnterText(txtMiddleName, middleName);
-            SeleniumSetMethods.Click(btnSave);
+            ////2
+            ////with custom methods which are cooming from Selenium
+            //SeleniumSetMethods.EnterText(txtInitial, initial);
+            //SeleniumSetMethods.EnterText(txtFirsName, firstName);
+            //SeleniumSetMethods.EnterText(txtMiddleName, middleName);
+            //SeleniumSetMethods.Click(btnSave);
+
+            //3
+            //with extension methods
+            txtInitial.EnterText(initial);
+            txtMiddleName.EnterText(middleName);
+            txtFirsName.EnterText(firstName);
+            btnSave.Clicks();
+
         }
     }
 }

@@ -23,7 +23,7 @@ namespace Selenium3
         [FindsBy(How = How.Name, Using = "Password")]
         public IWebElement txtPassword { get; set; }
 
-        [FindsBy(How = How.Name, Using ="Login")]
+        [FindsBy(How = How.Name, Using = "Login")]
         public IWebElement btnLogin { get; set; }
 
 
@@ -31,7 +31,7 @@ namespace Selenium3
         //we will write a method and for the login and we will invoke it from the Program.cs
         //след като кликна на бутона ще върне ЕАpageObject, което всъщност е втората страница и го пишем като инстанция на логин пейджа "public EApageObject Login"
         public EApageObject Login(string userName, string password)
-        {
+        {   //1.
             //user name
             txtUserName.SendKeys(userName);
             //password
@@ -39,6 +39,14 @@ namespace Selenium3
             //click button
             btnLogin.Submit();
             //or btnLogin.Click();
+
+            ////2. with extension method
+            ////user name
+            //txtUserName.EnterText(userName);
+            ////password
+            //txtPassword.EnterText(password);
+            ////click button
+            //btnLogin.Clicks();
 
             //Return the page object - redirecting to the next page
             return new EApageObject();
